@@ -19,12 +19,12 @@ main {
     padding: 1rem;
     margin-top: 2rem;
     margin-bottom: 5rem;
-
 }
 
 .row {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap; /* Allow row items to wrap on smaller screens */
+    justify-content: center;
     width: 100%;
     max-width: 1200px;
     margin-bottom: 2rem;
@@ -36,8 +36,6 @@ main {
     align-items: center;
     margin-bottom: 2rem;
     width: 100%;
-
-
 }
 
 .blog-entry {
@@ -45,9 +43,10 @@ main {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1rem;
-    width: 48%;
     box-sizing: border-box;
     text-align: center;
+    width: 100%; /* Full width for mobile */
+    margin-bottom: 1rem; /* Add some space between entries */
 }
 
 .blog-entry img {
@@ -58,25 +57,22 @@ main {
 }
 
 .blog-entry h2 {
-    font-size: 2em; /* Increase the size of h2 */
+    font-size: 2em; /* Keep the increased size of h2 */
 }
 
 .dialogue p {
     text-align: left;
     line-height: 1.6;
     font-size: 1.2em; /* Increase the size of p */
-
 }
+
 .dialogue ul {
     text-align: left;
     line-height: 1.6;
-    font-size: 1.2em; /* Increase the size of p */
+    font-size: 1.2em;
     list-style-type: disc;
-    padding-left: 20px; /* Indent the list items */
-
-
+    padding-left: 20px;
 }
-
 
 footer {
     background-color: #333;
@@ -86,5 +82,19 @@ footer {
     width: 100%;
     position: fixed;
     bottom: 0;
+}
 
+/* Media Queries */
+@media (min-width: 768px) {
+    .blog-entry {
+        width: 55%; /* Wider for medium-sized screens */
+        margin: 1rem; /* Keep margin for spacing */
+    }
+}
+
+@media (min-width: 1024px) {
+    .blog-entry {
+        width: 40%; /* Wider for large screens */
+        margin: 1rem; /* Maintain spacing between entries */
+    }
 }
