@@ -94,6 +94,14 @@ footer {
 }
 
 /* Media Queries */
+
+/* For small screens, adjust the 'main' top position */
+@media (max-width: 767px) {
+    main {
+        top: -50px; /* Reduce the upward movement for small screens */
+    }
+}
+
 @media (min-width: 768px) {
     .blog-entry {
         width: 55%; /* Wider for medium-sized screens */
