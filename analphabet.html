@@ -8,24 +8,25 @@
 </head>
 <body>
     <header>
-        <h1>Why I Stopped Speaking German with Swiss German Speakers...</h1>
+        <h1>Why I Stopped Speaking German</h1>
+        <h1>with Swiss German Speakers...</h1>
+        <button id="toggle-nav" aria-expanded="false">Menu</button>
+        <nav id="nav" class="collapsed">
+            <ul>
+                <li><a href="index.html">Main Insights</a></li>
+                <li><a href="jobs.html">Job Search Insights</a></li>
+                <li><a href="courses.html">Courses Insights</a></li>
+                <li><a href="silence.html">Government Reactions</a></li>
+                <li><a href="languages.html">National Languages</a></li>
+                <li><a href="pass.html">Swiss Pass</a></li>
+                <li><a href="emails.html">Workplace</a></li>
+                <li><a href="analphabet.html">Swiss Illiteracy</a></li>
+                <li><a href="justice.html">Justice</a></li>
+                <li><a href="freelancing.html">Freelance Register</a></li>
+                <li><a href="mobbing.html">Mobbing</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">Main Insights</a></li>
-            <li><a href="jobs.html">Job Search Insights</a></li>
-            <li><a href="courses.html">Courses Insights</a></li>
-            <li><a href="silence.html">Government Reactions</a></li>
-            <li><a href="languages.html">National Languages</a></li>
-            <li><a href="pass.html">Swiss Pass</a></li>
-            <li><a href="emails.html">Workplace</a></li>
-            <li><a href="analphabet.html">Swiss Illiteracy</a></li>
-            <li><a href="justice.html">Justice</a></li>
-            <li><a href="freelancing.html">Freelance Register</a></li>
-            <li><a href="mobbing.html">Mobbing</a></li>
-        </ul>
-    </nav>
     
     <main>
         <div class="center">
@@ -33,43 +34,33 @@
                 <img src="analphabet.jpg" alt="Image about illiteracy" width="300" height="auto">
                 
                 <h2>Swiss Illiteracy</h2>
-                <p class="paragraph">
-                    Here’s a story from a few years ago that really stuck with me.
-                </p>
-                <p class="paragraph">
-                    I was asked to create a draft report for a project that the company did three years earlier. The whole thing had to be in German.
-                </p>
-                <p class="paragraph">
-                    So, I used an old report, that I was told to reuse as the project was almost the same,
-                    changed just the technical details, and handed it over to the responsible person.
-                </p>
-                <p class="paragraph">
-                    This is what happened:
+                <p class="paragraph">Here’s a story from a few years ago that really stuck with me.</p>
+                <p class="paragraph">I was asked to create a draft report for a project that the company did three years earlier. The whole thing had to be in German.</p>
+                <p class="paragraph">So, I used an old report, that I was told to reuse as the project was almost the same, changed just the technical details, and handed it over to the responsible person.</p>
+                <p class="paragraph">This is what happened:
                     <br>- He complained that the German was bad.
-                    <br>- But here's the twist: he was the one who wrote the original report 
-                    (he's Swiss German), and I barely changed a thing!
+                    <br>- But here's the twist: he was the one who wrote the original report (he's Swiss German), and I barely changed a thing!
                     <br>- I tried to explain, but it didn't work.
-                    <br>- Some people think that if German isn’t your first language, you can’t argue 
-                    with them about it. They assume they know more.
+                    <br>- Some people think that if German isn’t your first language, you can’t argue with them about it. They assume they know more.
                     <br>- When people are taught to hate, they spread that hate.
                 </p>
-                <p class="paragraph">
-                    I’ve seen many reports written by Swiss German people full of typos and grammar mistakes. 
-                    I never thought of that as a sign of poor education or illiteracy.
-                </p>
-                <p class="paragraph">
-                    But after that experience, I started to think differently. 
-                </p>
-                <p class="paragraph">
-                    A lot of Swiss Germans don’t write perfect German, probably because they dislike 
-                    the language. So, they never really get good at it. When people feel insecure about 
-                    their skills, they often hide it with anger.
-                </p>
+                <p class="paragraph">I’ve seen many reports written by Swiss German people full of typos and grammar mistakes. I never thought of that as a sign of poor education or illiteracy.</p>
+                <p class="paragraph">But after that experience, I started to think differently.</p>
+                <p class="paragraph">A lot of Swiss Germans don’t write perfect German, probably because they dislike the language. So, they never really get good at it. When people feel insecure about their skills, they often hide it with anger.</p>
             </div>
         </div>
     </main>
     <footer>
         <p>&copy; 2024 My Simple Blog</p>
     </footer>
+    
+    <!-- Include your JavaScript just before the closing body tag -->
+    <script>
+        document.getElementById("toggle-nav").addEventListener("click", function () {
+            const nav = document.getElementById("nav");
+            const isExpanded = nav.classList.toggle("expanded");
+            this.setAttribute("aria-expanded", isExpanded);
+        });
+    </script>
 </body>
 </html>

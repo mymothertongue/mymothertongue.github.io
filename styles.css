@@ -1,3 +1,4 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,29 +7,95 @@ body {
 }
 
 header {
-    background-color: #165dd7;
+    background-color: #e08d21;
     color: white;
     padding: 1rem 0;
     text-align: center;
+    position: relative; /* Set position to relative for proper nav positioning */
 }
+
+button#toggle-nav {
+    position: absolute; /* Position the toggle button absolutely */
+    right: 10px; /* Adjust to your preference */
+    top: 10px; /* Adjust to your preference */
+    background-color: rgb(199, 219, 20);
+    border: 2px solid #0a0a0a;
+    color: #000000;
+    cursor: pointer;
+    padding: 10px 15px; /* Increase padding for a bigger button */
+    font-size: 1.2em; /* Increase font size for better visibility */
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s; /* Add a transition for hover effect */
+}
+
+button#toggle-nav:hover {
+    background-color: rgb(20, 219, 96); /* Change background color on hover */
+}
+
+
+/* Floating Navigation */
+nav {
+    position: fixed; /* Fixed positioning to float */
+    right: -250px; /* Initially hide off-screen */
+    top: 50px; /* Adjust based on your header height */
+    width: 250px; /* Width of the nav */
+    background-color: rgb(145, 224, 175); /* Background color for visibility */
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    transition: right 0.3s ease; /* Smooth transition */
+    z-index: 1000; /* Ensure it sits above other content */
+}
+
+nav ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+nav ul li {
+    margin-bottom: 10px; /* Space between list items */
+    margin-top: 10px; /* Space between list items */
+    line-height: 1.5; /* Increase line height for better spacing */
+    padding-right: 10px; /* Optional: add padding if you want space on the right */
+}
+
+
+
+nav.expanded {
+    right: 0; /* Move into view when expanded */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #nav {
+        margin-top: 10px; /* Add space between the nav and the header */
+    }
+    
+}
+
+/* Styles for larger screens */
+@media (min-width: 768px) {
+    .blog-entry {
+        width: 55%; 
+        margin: 1rem; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .blog-entry {
+        width: 40%; 
+        margin: 1rem; 
+    }
+}
+
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 2rem; /* Added padding for a better layout */
     margin-bottom: 5rem;
-    position: relative;
-    top: -200px; /* Adjust this value as needed */
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap; /* Allow row items to wrap on smaller screens */
-    justify-content: center;
-    width: 100%;
-    max-width: 1200px;
-    margin-bottom: 2rem;
+    max-width: 800px; /* Optional: Set a maximum width for main content */
+    margin: 0 auto; /* Center the main section */
 }
 
 .center {
@@ -46,8 +113,8 @@ main {
     padding: 1rem;
     box-sizing: border-box;
     text-align: center;
-    width: 100%; /* Full width for mobile */
-    margin-bottom: 1rem; /* Add some space between entries */
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 .blog-entry img {
@@ -58,61 +125,23 @@ main {
 }
 
 .blog-entry h2 {
-    font-size: 2em; /* Keep the increased size of h2 */
-}
-
-.dialogue p {
-    text-align: left;
-    line-height: 1.6;
-    font-size: 1.2em; /* Increase the size of p */
-}
-
-.dialogue ul {
-    text-align: left;
-    line-height: 1.6;
-    font-size: 1.2em;
-    list-style-type: disc;
-    padding-left: 20px;
+    font-size: 2em;
 }
 
 .paragraph {
-    font-size: 1.1rem; /* Slightly larger font size for readability */
-    line-height: 1.6; /* Increased line height for better readability */
-    margin-bottom: 1.5rem; /* Space below paragraphs */
-    color: #333; /* Darker color for better contrast */
-    text-align: left; /* Justified text for a clean look */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: left;
 }
 
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 1rem 0;
+    padding: 0rem 0;
     width: 100%;
     position: fixed;
     bottom: 0;
-}
-
-/* Media Queries */
-
-/* For small screens, adjust the 'main' top position */
-@media (max-width: 767px) {
-    main {
-        top: -50px; /* Reduce the upward movement for small screens */
-        margin-top: 60px; /* Add space between nav and main */
-    }
-}
-
-@media (min-width: 768px) {
-    .blog-entry {
-        width: 55%; /* Wider for medium-sized screens */
-        margin: 1rem; /* Keep margin for spacing */
-    }
-}
-
-@media (min-width: 1024px) {
-    .blog-entry {
-        width: 40%; /* Wider for large screens */
-        margin: 1rem; /* Maintain spacing between entries */
-    }
 }

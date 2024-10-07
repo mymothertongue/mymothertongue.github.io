@@ -8,24 +8,25 @@
 </head>
 <body>
     <header>
-        <h1>Why I Stopped Speaking German with Swiss German Speakers...</h1>
+        <h1>Why I Stopped Speaking German</h1>
+        <h1>with Swiss German Speakers...</h1>
+        <button id="toggle-nav" aria-expanded="false">Menu</button>
+        <nav id="nav" class="collapsed">
+            <ul>
+                <li><a href="index.html">Main Insights</a></li>
+                <li><a href="jobs.html">Job Search Insights</a></li>
+                <li><a href="courses.html">Courses Insights</a></li>
+                <li><a href="silence.html">Government Reactions</a></li>
+                <li><a href="languages.html">National Languages</a></li>
+                <li><a href="pass.html">Swiss Pass</a></li>
+                <li><a href="emails.html">Workplace</a></li>
+                <li><a href="analphabet.html">Swiss Illiteracy</a></li>
+                <li><a href="justice.html">Justice</a></li>
+                <li><a href="freelancing.html">Freelance Register</a></li>
+                <li><a href="mobbing.html">Mobbing</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">Main Insights</a></li>
-            <li><a href="jobs.html">Job Search Insights</a></li>
-            <li><a href="courses.html">Courses Insights</a></li>
-            <li><a href="silence.html">Government Reactions</a></li>
-            <li><a href="languages.html">National Languages</a></li>
-            <li><a href="pass.html">Swiss Pass</a></li>
-            <li><a href="emails.html">Workplace</a></li>
-            <li><a href="analphabet.html">Swiss Illiteracy</a></li>
-            <li><a href="justice.html">Justice</a></li>
-            <li><a href="freelancing.html">Freelance Register</a></li>
-            <li><a href="mobbing.html">Mobbing</a></li>
-        </ul>
-    </nav>
     
     <main>
         <div class="center">
@@ -94,5 +95,14 @@
     <footer>
         <p>&copy; 2024 My Simple Blog</p>
     </footer>
+    <!-- Include your JavaScript just before the closing body tag -->
+    <script>
+        document.getElementById("toggle-nav").addEventListener("click", function () {
+            const nav = document.getElementById("nav");
+            const isExpanded = nav.classList.toggle("expanded");
+            this.setAttribute("aria-expanded", isExpanded);
+        });
+    </script>
 </body>
 </html>
+
