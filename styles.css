@@ -99,7 +99,7 @@ footer {
 @media (max-width: 767px) {
     main {
         top: -50px; /* Reduce the upward movement for small screens */
-        margin-top: 40px; /* Add space between nav and main */
+        margin-top: 60px; /* Add space between nav and main */
     }
 }
 
