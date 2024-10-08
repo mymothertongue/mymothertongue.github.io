@@ -86,10 +86,17 @@ nav.expanded {
 
 /* Media Queries */
 @media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Stack elements vertically for smaller screens */
+    }
+    
+    nav {
+        top: 10px; /* Adjust navigation positioning for mobile */
+    }
+    
     #nav {
         margin-top: 10px; /* Add space between the nav and the header */
     }
-    
 }
 
 /* Styles for larger screens */
