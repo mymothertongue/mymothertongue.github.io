@@ -18,6 +18,22 @@ header h1 {
     margin-top: 50px; /* Adjust this value as needed to create space */
 }
 
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 2rem;
+}
+
+.dialogue ul {
+    text-align: left;
+    line-height: 1.6;
+    font-size: 1.2em; /* Increase the size of p */
+    list-style-type: disc;
+    padding-left: 20px; /* Indent the list items */
+}
+
 button#toggle-nav {
     position: absolute; /* Position the toggle button absolutely */
     right: 10px; /* Adjust to your preference */
